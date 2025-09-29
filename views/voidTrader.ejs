@@ -48,7 +48,7 @@
   <div class="navbar">
     <a class="home1" href="/">Home</a>
     <a class="light1" onclick="toggleLightMode()">Light Mode</a>
-    <a class="login1" href="/views/register.ejs">Login</a>
+    <a class="login1" href="/register">Login</a>
     <div class="dropdown">
       <button class="dropbtn">Contents</button>
       <div class="dropdown-content">
@@ -59,7 +59,10 @@
     </div>
   </div>
 
+  <div id="outputTrade"></div>
+
      <!-- 5) Defer scripts to avoid render-blocking -->
+    <script src= "/scripts/apiVoidTrader.js" defer></script>
     <script src="/scripts/functions.js" defer></script>
     <script src="/scripts/theme-toggle.js" defer></script>
 </body>
