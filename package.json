@@ -1,0 +1,27 @@
+{
+  "name": "ta_veeb_ap",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://andrep2tlu@github.com/andrep2tlu/Project-2x.git"
+  },
+  "keywords": [
+    "node.js",
+    "express.js",
+    "TLU"
+  ],
+  "author": "Andre Priks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrep2tlu/Project-2x/issues"
+  },
+  "homepage": "https://github.com/andrep2tlu/Project-2x#readme",
+  "dependencies": {
+    "express.js": "^1.0.0"
+  }
+}
