@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <title>Prime Resurgence</title>
+    <!-- 1) Theme class light/dark -->
+  <script>
+    const saved = localStorage.getItem("themeMode");
+    const useLight = saved === "true";
+    document.documentElement.classList.toggle("light-mode", useLight);
+  </script>
+
+  <!-- 2) Inline critical CSS for navbar and header -->
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+    }
+    .navbar {
+      display: flex;
+      background-color: #494242;
+      overflow: hidden;
+    }
+    .navbar a {
+      padding: 14px 16px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+    }
+    .header {
+      display: flex;  
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+  </style>
+
+  <!-- 3) Preload full stylesheet without blocking -->
+  <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="styles.css">
+  </noscript>
+</head>
+<body>
+
+  <div class="navbar">
+    <a class="home1" href="index.html">Home</a>
+    <a class="light1" onclick="toggleLightMode()">Light Mode</a>
+    <a class="login1" href="../forms/register.html">Login</a>
+    <div class="dropdown">
+      <button class="dropbtn">Contents</button>
+      <div class="dropdown-content">
+        <a href="./resurgence.html">Prime Resurgence</a>
+        <a href="./voidTrader.html">Void trader</a>
+        <a href="#">Nightwave</a>
+      </div>
+    </div>
+  </div>
+</head>
+  <div class="img1">
+      <div id="frameImg1"></div>
+      <div id="frameImg2"></div>
+    </div>
+    <div class="countdownsResurgence">
+      <div id="output"></div>
+      <div id="countdown"></div>
+      <div id="nextCountdown"></div>
+    </div>
+    <div class="img2">
+      <div id="frameImg3"></div>
+      <div id="frameImg4"></div>
+    </div>
+     <!-- 5) Defer scripts to avoid render-blocking -->
+    <script src="../scripts/apiResurgence.js" defer></script>
+    <script src="../scripts/functions.js" defer></script>
+    <script src="../scripts/theme-toggle.js" defer></script>
+</body>
+</html>
