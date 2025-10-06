@@ -85,8 +85,8 @@ function renderTradeData(data) {
     el.appendChild(list);
   } else if (data.inventory && typeof data.inventory === 'object') {
     // some API responses may include inventory as an object
-    el.insertAdjacentHTML('beforeend', '<h4>Inventory (raw)</h4>');
-    el.insertAdjacentHTML('beforeend', `<pre>${JSON.stringify(data.inventory, null, 2)}</pre>`);
+    el.insertAdjacentHTML('beforeend', 'Nothing here currently');
+    //el.insertAdjacentHTML('beforeend', `<pre>${JSON.stringify(data.inventory, null, 2)}</pre>`);
   } else {
     el.insertAdjacentHTML('beforeend', '<p>No inventory data.</p>');
   }
@@ -96,4 +96,4 @@ function renderTradeData(data) {
 //fetchdata(false);
 
 // use local test file
-fetchdata(true);
+fetchdata(false);

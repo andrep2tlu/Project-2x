@@ -36,6 +36,9 @@ align-items: center;
     cursor: pointer;
 }
 
+.server-message { padding: 8px; margin: 8px 0; border-radius: 4px; }
+.server-message.error { background:#fee; color:#900; border:1px solid #f88; }
+.server-message.success { background:#efe; color:#060; border:1px solid #8f8; }
 
 
 body.light-mode {

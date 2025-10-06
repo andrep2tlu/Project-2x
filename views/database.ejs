@@ -38,30 +38,52 @@
   </style>
 
   <!-- 3) Preload full stylesheet without blocking -->
-  <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="/css/styles.css" as="style" onload="this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
   </noscript>
 </head>
 <body>
 
   <div class="navbar">
-    <a class="home1" href="index.html">Home</a>
+    <a class="home1" href="/">Home</a>
     <a class="light1" onclick="toggleLightMode()">Light Mode</a>
-    <a class="login1" href="../forms/register.html">Login</a>
+    <a class="login1" href="/register">Login</a>
     <div class="dropdown">
       <button class="dropbtn">Contents</button>
       <div class="dropdown-content">
-        <a href="./resurgence.html">Prime Resurgence</a>
-        <a href="./voidTrader.html">Void trader</a>
+        <a href="/resurgence">Prime Resurgence</a>
+        <a href="/voidTrader">Void trader</a>
         <a href="#">Nightwave</a>
       </div>
     </div>
   </div>
-</head>
+
+    <h1>Database</h1>
+
+<% if (error) { %>
+  <div class="error"><%= error %></div>
+<% } %>
+
+<% if (rows && rows.length) { %>
+  <table>
+    <thead><tr>
+      <% Object.keys(rows[0]).forEach(col => { %><th><%= col %></th><% }) %>
+    </tr></thead>
+    <tbody>
+      <% rows.forEach(row => { %>
+        <tr>
+          <% Object.values(row).forEach(val => { %><td><%= val %></td><% }) %>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } else { %>
+  <p>No rows found.</p>
+<% } %>
 
      <!-- 5) Defer scripts to avoid render-blocking -->
-    <script src="../scripts/functions.js" defer></script>
-    <script src="../scripts/theme-toggle.js" defer></script>
+    <script src="/scripts/functions.js" defer></script>
+    <script src="/scripts/theme-toggle.js" defer></script>
 </body>
 </html>

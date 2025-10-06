@@ -1,4 +1,5 @@
-const warframes = ["Ash",
+const warframes = [
+  "Ash",
   "Ember",
   "Excalibur",
   "Loki",
@@ -58,8 +59,8 @@ const warframes = ["Ash",
   "Koumei",
   "Cyte-09",
   "Temple",
-  "Oraxia"];
-
+  "Oraxia"
+];
 
 const warframeImages = [
 "https://wiki.warframe.com/images/AshPrimeFull.png?bb4a6",
@@ -110,8 +111,8 @@ const warframeImages = [
 "https://static.wikia.nocookie.net/warframe/images/5/5a/SevagothPrimeFull.png/revision/latest",
 "https://wiki.warframe.com/images/YareliPrime.png?a28ee",
 "https://wiki.warframe.com/images/CalibanPrime.png?feeeb",
-"https://static.wikia.nocookie.net/warframe/images/?/?c/GyrePrimeFull.png/revision/latest" ];
-
+"https://static.wikia.nocookie.net/warframe/images/?/?c/GyrePrimeFull.png/revision/latest"
+];
 
 let endTime = null;
 let endTime2 = null;
